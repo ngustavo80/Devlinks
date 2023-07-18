@@ -29,7 +29,8 @@ body {
   color: var(--text-color);
   background: var(--bg-url) no-repeat top center/cover;
 
-  max-width: 22.5rem;
+  max-width: 28rem;
+  height: 100vh;
   margin: auto;
 }
 
@@ -182,7 +183,7 @@ footer {
   text-align: center;
   padding: 0 1.5rem;
 
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 600px) {
