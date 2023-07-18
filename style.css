@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #fff;
+  --bg-url: url("./assets/bg-desktop.jpg");
+  --bgcolor-portifoliolink: rgba(255, 255, 255, 0.1);
+  --bgcolor-linkhover: rgba(255, 255, 255, 0.2);
+  --bgcolor-switch: rgba(255, 255, 255, 0.2);
+  --bordercolor-switch: rgba(255, 255, 255, 0.3);
+  --switch-bg-url: url("./assets/MoonStars.svg");
+}
+
+.light-mode {
+  --text-color: #000;
+  --bg-url: url("./assets/bg-desktop-light.jpg");
+  --bgcolor-portifoliolink: rgba(0, 0, 0, 0.1);
+  --bgcolor-linkhover: rgba(0, 0, 0, 0.2);
+  --bgcolor-switch: rgba(0, 0, 0, 0.2);
+  --bordercolor-switch: rgba(0, 0, 0, 0.3);
+  --switch-bg: url("./assets/Sun.svg");
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  background: var(--bg-url) no-repeat top center/cover;
+
+  max-width: 22.5rem;
+  margin: auto;
+}
+
+header {
+  margin-top: 3.5rem;
+  padding: 0 1.5rem;
+}
+
+main#main-container {
+  padding: 1.5rem;
+}
+
+header.profile {
+  text-align: center;
+  padding: 2rem;
+}
+
+header.profile img {
+  border-radius: 50%;
+  width: 7rem;
+
+  margin-bottom: 0.5rem;
+}
+
+header.profile p {
+  font-weight: 700;
+}
+
+div.switch {
+  width: 4rem;
+  margin: 4px auto;
+  position: relative;
+}
+
+div.switch button {
+  width: 2rem;
+  height: 2rem;
+
+  background: #fff var(--switch-bg-url) no-repeat center;
+
+  border-radius: 50%;
+
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  transform: translateY(50%);
+
+  padding: 4px;
+  z-index: 1;
+
+  transition: transform 0.3s;
+}
+
+div.switch button:hover {
+  transform: scale(1.2) translateY(45%);
+}
+
+div.switch span {
+  display: block;
+  width: 4rem;
+  height: 1.5rem;
+
+  background-color: var(--bgcolor-switch);
+  border: 1px solid var(--bordercolor-switch);
+  border-radius: 99999px;
+}
+
+.light-mode div.switch button {
+  right: 0;
+  left: initial;
+
+  background-image: var(--switch-bg);
+}
+
+.light-mode div.switch span {
+  background-color: var(--bgcolor-switch);
+  border: 1px solid var(--bordercolor-switch);
+}
+
+ion-icon {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+section.links {
+  margin-top: 1.5rem;
+}
+
+ul.portifolio {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+ul.portifolio li a {
+  background: var(--bgcolor-portifoliolink);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px var(--text-color) solid;
+  border-radius: 8px;
+
+  padding: 1rem;
+
+  transition: background 0.3s;
+}
+
+ul.portifolio li a:hover {
+  background: var(--bgcolor-linkhover);
+  border: 1px solid var(--bgcolor-linkhover);
+}
+
+div.socials {
+  margin: 2rem auto 2rem;
+}
+
+div.socials {
+  display: flex;
+  justify-content: center;
+}
+
+div.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 50%;
+
+  transition: background 0.3s;
+}
+
+div.socials a:hover {
+  background: var(--bgcolor-linkhover);
+}
+
+footer {
+  text-align: center;
+  padding: 0 1.5rem;
+
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .light-mode {
+    --bg-url: url("./assets/bg-mobile-light.jpg");
+  }
+
+  :root {
+    --bg-url: url("./assets/bg-mobile.jpg");
+  }
+}
