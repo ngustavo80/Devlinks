@@ -78,6 +78,8 @@ div.switch button {
   left: 0;
   transform: translateY(50%);
 
+  animation: slide-left 0.4s;
+
   padding: 4px;
   z-index: 1;
 
@@ -99,8 +101,7 @@ div.switch span {
 }
 
 .light-mode div.switch button {
-  right: 0;
-  left: initial;
+  animation: slide-right 0.4s forwards;
 
   background-image: var(--switch-bg);
 }
@@ -193,5 +194,23 @@ footer {
 
   :root {
     --bg-url: url("./assets/bg-mobile.jpg");
+  }
+}
+
+@keyframes slide-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
