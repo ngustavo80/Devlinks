@@ -86,7 +86,7 @@ div.switch button {
   transition: transform 0.3s;
 }
 
-div.switch button:hover {
+div.switch:hover button {
   transform: scale(1.2) translateY(45%);
 }
 
